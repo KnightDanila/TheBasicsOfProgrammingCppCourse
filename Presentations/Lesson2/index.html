@@ -56,7 +56,7 @@ and open the template in the editor.
                     </h3>
                     Branches (
                     if, else, then, 
-                    case, match, 
+                    switch, case, 
                     ternary operation,
                     Elvis operator
                     )
@@ -74,8 +74,8 @@ and open the template in the editor.
                 <section>
                     <h3>Branches:</h3>
                     <ul>
-                        <li>if, else, then</li>
-                        <li>case, match</li>
+                        <li>if, else</li>
+                        <li>switch, case</li>
                         <li>ternary operation</li>
                         <li>Elvis operator</li>
                     </ul>
@@ -124,10 +124,6 @@ and open the template in the editor.
 
                             }
                         </code></pre>
-                    </section>
-
-                    <section>
-                        <img src="data/Code_IF_Else_Ex_2.png" alt=""  class="stretch plain"/>
                     </section>
 
                     <section>
@@ -210,7 +206,8 @@ if(b > a)
 cout << "Maximum: " << max << endl;
                         </code></pre>
                     </section>
-                    <section>
+<!--  move to functions                
+<section>
                         <h4>If without Else - ex.Max</h4>
                         Is it looks good?
                         <pre class="cpp"><code>
@@ -241,7 +238,7 @@ bool encodeString(char *text, int text_len) {
     return true;
 }
                         </code></pre>
-                    </section>
+                    </section>-->
                 </section>
                 <section>
                     <section>
@@ -261,10 +258,10 @@ else {
 }
                         </code></pre>
                     </section>
-                    <section>
+<!--                    <section>
                         <h4>If..Else inside If..Else</h4>
                         <img src="data/Code_IF_Else_Inside_IF.webp" alt="" style="background-color: white" class="stretch plain"/>
-                    </section>
+                    </section>-->
                     <section>
                         <h4>If..Else inside If..Else</h4>
                         <img src="data/Code_IF_Else_Inside_IF_2.jpg" alt="" class="stretch plain"/>
@@ -409,6 +406,12 @@ cout << "Maximum: " << max << endl;
                         <h4>Switch...Case - Match...Case</h4>
                         <div style="float:left; width: 48%; margin-right: 10px">
                             <pre class="cpp"><code>
+enum Colors {
+	COLOR_GREEN,
+	COLOR_YELLOW,
+	COLOR_RED
+};
+
 if(color == COLOR_GREEN) {
     cout << "Go, go, go... But don`t RUN" << endl;
 }
