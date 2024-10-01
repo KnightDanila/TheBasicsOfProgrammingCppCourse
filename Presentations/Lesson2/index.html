@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Presentation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+        <link rel="stylesheet" href="../js/libs/reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="../js/libs/reveal.js/css/theme/night.css">
+        <link href="../js/libs/highlight.js/styles/arduino-light.min.css" rel="stylesheet" type="text/css"/>
+
+        <!--<script src="../js/libs/jquery/jquery.js" type="text/javascript"></script>-->
+        <link href="../theme/style.css" rel="stylesheet" type="text/css"/>
+
+        <!--<link href="theme/iframeWebpagePreview/iframeWebpagePreview.css" rel="stylesheet" type="text/css"/>-->
+        <!--<script src="theme/iframeWebpagePreview/iframeWebpagePreview.js" type="text/javascript"></script>-->
+
+        <link href="../js/ClockJS/SimpleTimer.css" rel="stylesheet" type="text/css"/>
+        <script src="../js/ClockJS/SimpleTimer.js" type="text/javascript"></script>
+        <!--<link href="theme/xClose.css" rel="stylesheet" type="text/css"/>-->
+    </head>
+    <body id="MainPresentation">
+        <div id="Timer1" class="simpleTimer simpleTimer-white simpleTimer-alignLeft simpleTimer-fly simpleTimer-box">timer1</div>
+
+        <div class="reveal">
+            <div class="slides">
+                <!--<section>
+                    Single Horizontal Slide
+                </section>-->
+                <!--<section>
+                        <section>Vertical Slide 1</section>
+                        <section>Vertical Slide 2</section>
+                </section>-->
+
+                <section>
+                    <h2>Fullscreen mode</h2>
+                    <p>
+                        Just press »F« on your keyboard to show your presentation in fullscreen mode. Press the »ESC« key to exit fullscreen mode.
+                    </p>
+                    <h2>Overview mode</h2>
+                    <p>
+                        Press "Esc" or "o" keys to toggle the overview mode on and off. While you're in this mode, you can still navigate between slides, as if you were at 1,000 feet above your presentation.
+                    </p>
+                </section>
+
+                <section>
+                    <br>
+                    <h3>
+                        C++ and The Basics of Programming.
+                    </h3>
+                    Branches (
+                    if, else, then, 
+                    case, match, 
+                    ternary operation,
+                    Elvis operator
+                    )
+                    <br>   
+                    <img src="../data/cpp_logo.png" alt="" class="stretch plain"/>
+                    <br>
+                    Lesson 2
+                    <br>
+                    <div style="font-size: xx-large;">
+                        Author: Egoshkin Danila Igorevich
+                    </div>
+                </section>
+
+                <!--Topic N-->
+                <section>
+                    <h3>Branches:</h3>
+                    <ul>
+                        <li>if, else, then</li>
+                        <li>case, match</li>
+                        <li>ternary operation</li>
+                        <li>Elvis operator</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <section>
+                        <h4>If and Else</h4>
+                        <img src="data/Code_IF_Else_Choice.jpg" alt="" class="stretch plain"/>
+                    </section>
+
+                    <section>
+                        <h3>What is the "If and Else" Branches?</h3>
+                        <img src="data/Code_IF_Else_Ex.webp" alt="" style="background-color: white" class="stretch plain"/>
+                    </section>
+
+                    <section>
+                        <h3>What is the "If and Else" Branches?</h3>
+                        <img src="data/Code_If_Then_Else_diagram_svg.png" alt="" style="background-color: white" class="stretch plain"/>
+                    </section>
+
+                    <section>
+                        <h3>What is the "If and Else" Branches?</h3>
+                        <img src="data/Code_IF_Else_Ex.png" alt="" class="stretch plain"/>
+                    </section>
+
+                    <section>
+                        <h3>What is the "If and Else" Branches?</h3>
+                        <img src="data/Code_IF_Else_Ex_Work.png" alt="" style="background-color: white" class="stretch plain"/>
+                    </section>
+
+                </section>
+                <section>
+                    <section>
+                        <h4>If and Else - Examples</h4>
+                    </section>
+                    <section>
+                        <h4>If and Else</h4>
+                        <pre class="cpp" style="white-space: pre-line;" ><code>
+                            if(condition == true)
+                            {
+                            
+                            }
+                            else
+                            {
+
+                            }
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <img src="data/Code_IF_Else_Ex_2.png" alt=""  class="stretch plain"/>
+                    </section>
+
+                    <section>
+                        <h4>If and Else - ex.Max</h4>
+                        <pre class="cpp"><code>
+int a, b, max;
+cout << "Enter a: "; 
+cin >> a;
+cout << "Enter b: "; 
+cin >> b;
+if(a > b)
+{
+    max = a;
+}
+else
+{
+    max = b;
+}
+cout << "Maximum: " << max << endl;
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h4>Can we use If without Else?</h4>
+                    </section>
+
+                    <section>
+                        <h4>Can we use If without Else?</h4>
+                        Yes!!!<br>
+                        <pre class="cpp"><code>
+if(condition == true)
+{
+    // ToDo
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h4>If without Else - ex.Number</h4>
+                        <pre class="cpp"><code>
+int number;
+cout << "Enter number [0,+inf]: ";
+cin >> number;
+if(number == 0)
+{
+    cout << "The Number is equal to 0" << endl;
+}
+if(number > 0)
+{
+    cout << "The Number more than 0" << endl;
+}
+if(number > 25)
+{
+    cout << "and more than 25" << endl;
+}
+if(number > 50)
+{
+    cout << "and bigger than 50" << endl;
+}
+if(number > 100)
+{
+    cout << "and larger than 100" << endl;
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h4>If without Else - ex.Max</h4>
+                        <pre class="cpp"><code>
+int a, b, max;
+cout << "Enter a: "; 
+cin >> a;
+cout << "Enter b: "; 
+cin >> b;
+max = a;
+if(b > a)
+{
+    max = b;
+}
+cout << "Maximum: " << max << endl;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h4>If without Else - ex.Max</h4>
+                        Is it looks good?
+                        <pre class="cpp"><code>
+void encoder(char *text, int text_len){
+    for (int i = 0; i < text_len; i++) {
+        char letter = text[i];
+        char part1 = (letter & 0xf0) >> 4;
+        char part2 = letter & 0xf;
+        char part1_1 = (part1 >> 3) << 2;
+        char part1_2 = ((part1 >> 2) & 0x1) << 3;
+        char part1_3 = ((part1 >> 1) & 0x1);
+        char part1_4 = (part1 & 0x1) << 1;
+        part1 = part1_1 | part1_2 | part1_3 | part1_4;
+        part2 = part1 ^ part2;
+        text[i] = (part1 << 4) | part2;
+    }
+}
+
+bool encodeString(char *text, int text_len) {
+
+    // What is wrong with encodeString function
+
+    if (text != NULL) {
+        encoder(text, text_len);
+        cout << "Encrypted: " << text << endl;
+    }
+ 
+    return true;
+}
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h4>If..Else inside If..Else</h4>
+                        <pre class="cpp"><code>
+if() {
+    if() {
+    }
+    else {
+    }
+}
+else {
+    if() {
+    }
+    else {
+    }
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h4>If..Else inside If..Else</h4>
+                        <img src="data/Code_IF_Else_Inside_IF.webp" alt="" style="background-color: white" class="stretch plain"/>
+                    </section>
+                    <section>
+                        <h4>If..Else inside If..Else</h4>
+                        <img src="data/Code_IF_Else_Inside_IF_2.jpg" alt="" class="stretch plain"/>
+                    </section>
+                    <section>
+                        <h4>If..Else inside If..Else</h4>
+                        <pre class="cpp"><code>
+if(Rainy) {
+    if(Windy) {
+        if(Cold) {
+            cout << "Stay Home and drink a tea" << endl;
+        } else {
+            cout << "Take umbrella and coat" << endl;
+        }
+    } else {
+        cout << "Take umbrella" << endl;
+    }
+} else {
+    cout << "Go for a walk" << endl;
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h4>If and Else - ex.Max a == b</h4>
+                        <pre class="cpp"><code>
+int a, b, max;
+cout << "Enter a: "; 
+cin >> a;
+cout << "Enter b: "; 
+cin >> b;
+
+if(a == b) {
+    cout << "a and b are the same" << endl;
+    max = a;
+}
+else {
+    if(a > b) {
+        max = a;
+    }
+    else {
+        max = b;
+    }
+}
+cout << "Maximum: " << max << endl;
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h4>else if - elif</h4>
+                        <img src="data/Code_Else_If_Elif.jpg" alt="" class="stretch plain"/>
+                    </section>
+                    <section>
+                        <h4>If, Else If and Else - ex.Max a == b</h4>
+                        <div style="float:left; width: 48%; margin-right: 10px">
+                            <pre class="cpp"><code>
+if(condition1) {
+}
+else {
+    if(condition2) {
+    }
+    else {
+        if(condition3) {
+        }
+        else {
+        }
+    }
+}
+                        </code></pre>
+                        </div>
+                        <div style="float:left; width: 48%; margin-right: 10px">
+                            <pre class="cpp"><code>
+if(condition1) {
+}
+else if(condition2) {
+}
+else if(condition3) {
+}
+else {
+}
+
+                        </code></pre>  
+                        </div>
+                    </section>
+
+                    <section>
+                        <h4>If, Else If and Else - ex.Max a == b</h4>
+                        <div style="float:left; width: 48%; margin-right: 10px">
+                            <pre class="cpp"><code>
+int a, b, max;
+cout << "Enter a: "; 
+cin >> a;
+cout << "Enter b: "; 
+cin >> b;
+
+if(a == b) {
+    cout << "a and b are the same" << endl;
+    max = a;
+}
+else {
+    if(a > b) {
+        max = a;
+    }
+    else {
+        max = b;
+    }
+}
+cout << "Maximum: " << max << endl;
+                        </code></pre>
+                        </div>
+                        <div style="float:left; width: 48%; margin-right: 10px">
+                            <pre class="cpp"><code>
+int a, b, max;
+cout << "Enter a: "; 
+cin >> a;
+cout << "Enter b: "; 
+cin >> b;
+
+if(a == b) {
+    cout << "a and b are the same" << endl;
+    max = a;
+}
+else if(a > b) {
+    max = a;
+}
+else {
+    max = b;
+}
+
+cout << "Maximum: " << max << endl;
+                        </code></pre>
+                        </div>
+                    </section>
+                </section>
+                <section>
+
+                    <section>
+                        <h4>Switch...Case - Match...Case</h4>
+                        <img src="data/Code_Switch_Case.png" alt="" class="stretch plain"/>
+                    </section>
+                    <section>
+                        <h4>Switch...Case - Match...Case</h4>
+                        <div style="float:left; width: 48%; margin-right: 10px">
+                            <pre class="cpp"><code>
+if(color == COLOR_GREEN) {
+    cout << "Go, go, go... But don`t RUN" << endl;
+}
+else {
+    if(color == COLOR_YELLOW) {
+         cout << "Hold on, steady, wait" << endl;
+    }
+    else {
+        if(color == COLOR_RED) {
+            cout << "Stay and wait" << endl;
+        }
+        else {
+            cout << "Stop digging your nose and look at the color" << endl;
+        }
+    }
+}
+                        </code></pre>
+                        </div>
+                        <div style="float:left; width: 48%; margin-right: 10px">
+                            <pre class="cpp"><code>
+enum Colors {
+	COLOR_GREEN,
+	COLOR_YELLOW,
+	COLOR_RED
+};
+
+switch (color)
+{
+    case COLOR_GREEN:
+        cout << "Go, go, go... But don`t RUN" << endl;
+        break;
+    case COLOR_YELLOW:
+        cout << "Hold on, steady, wait" << endl;
+        break;
+    case COLOR_RED:
+        cout << "Stay and wait" << endl;
+        break;
+    default:
+        cout << "Stop digging your nose and look at the color" << endl;
+        break;
+}
+
+                        </code></pre>  
+                        </div>
+                    </section>
+                    <section>
+                        <h4>Switch...Case - Match...Case</h4>
+                        <img src="data/Code_Switch_Case_2.jpeg" alt="" class="stretch plain"/>
+                    </section>
+                    <section>
+                        <h4>Switch...Case - Match...Case</h4>
+                        Only in python
+
+                        <pre class="cpp"><code>
+
+match (object):
+    case objectCase1 | objectCase2 | objectCase3:
+        ...
+    case _:
+        ...
+                        </code></pre>  
+
+                        <!--                        
+                        def go(direction):
+                            match direction:
+                                case "North" | "East" | "South" | "West":
+                                    return "Alright, I'm going!"
+                                case _:
+                                    return "I can't go that way..."
+                        
+                        print(go("North"))      # Alright, I'm going!
+                        print(go("Some where"))    # I can't go that way...
+
+                        # HARD CORE VERSION
+                        def go(direction):
+                            match direction:
+                                case "North" | "East" | "South" | "West" as d:
+                                    return f"Alright, I am going: {d}"
+                                case x:
+                                    return f"I can`t go there: {x}"
+                        # CRAZY CORE VERSION
+                        def go(direction):
+                            match direction:
+                                case "North" | "East" | "South" | "West" as d,steps if steps > 3:
+                                    return f"Alright, I am going: {d} Steps: {steps}"
+                                case x:
+                                    return f"I can`t go there: {x}"
+                        -->
+                    </section>
+                    <section>
+
+                        <h4>Switch...Case - Match...Case</h4>
+                        Only in python (Structural pattern matching is coming in Python 3.10)
+
+                        <img src="data/Code_Switch_Case_3.webp" alt="" class="stretch plain"/>
+                        <!--
+                        
+
+                        
+                        def isAlphaColour(colour):
+                            """return true if colour has Alpha channel."""
+                        
+                            isAlpha = null;
+                            match colour:
+                                case (r, g, b):
+                                    print(colour, "has no alpha channel")
+                                    isAlpha = false
+                                case (r, g, b, a):
+                                    print(colour, "has alpha channel", a)
+                                    isAlpha = true
+                                case _:
+                                    raise ValueError("Unknown colour type.")
+                            return isAlpha
+                        
+                        # Prints ('', (240, 248, 255, 0))
+                        print(isAlphaColour((240, 248, 255)))
+                        # Prints ('', (240, 248, 255, 0))
+                        print(isAlphaColour((240, 248, 255, 0)))
+                        # Prints ('AliceBlue', (240, 248, 255, 0))
+                        print(isAlphaColour(("AliceBlue", (240, 248, 255))))
+                        # Prints ('AliceBlue', (240, 248, 255, 0.3))
+                        print(isAlphaColour(("AliceBlue", (240, 248, 255, 0.3))))
+                        
+                        
+                        
+                        describe_point(x, y):
+                            """Write a human-readable description of the point position."""
+                        
+                            match point:
+                                case Point2D(x=0, y=0):
+                                    desc = "at the origin"
+                                case Point2D(x=0, y=y):
+                                    desc = f"in the vertical axis, at y = {y}"
+                                case Point2D(x=x, y=0):
+                                    desc = f"in the horizontal axis, at x = {x}"
+                                case Point2D(x=x, y=y) if x == y:
+                                    desc = f"along the x = y line, with x = y = {x}"
+                                case Point2D(x=x, y=y) if x == -y:
+                                    desc = f"along the x = -y line, with x = {x} and y = {y}"
+                                case Point2D(x=x, y=y):
+                                    desc = f"at {point}"
+                        
+                            return "The point is " + desc
+                        -->
+
+
+                    </section>
+                    <section>
+                        <img src="data/Code_Switch_Case_4_Mr_Hack.jpg" alt=""  class="stretch plain"/>
+                    </section>
+                    <section>
+                        <img src="data/Code_Switch_Case_5_Mr_Hack.jpg" alt=""  class="stretch plain"/>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        Ternary operation ???
+                        <img src="data/Sherlock_think_thinking_output_HD.gif" alt="" class="stretch plain"/>
+                    </section>
+                    <section>
+                        <h4>Ternary operation</h4>
+                        <br>
+                        Crown of thorns - Терновий вінець
+                        <br>
+                        <img src="data/Thorns.jpg" alt="" class="stretch plain"/>
+                        <br>
+                        <a href="https://en.wikipedia.org/wiki/Prunus_spinosa">https://en.wikipedia.org/wiki/Prunus_spinosa</a>
+                    </section>
+                    <section>
+                        <h4>Ternary operation in C++ and other</h4>
+                        <img src="data/Ternary_operation_.jpg" alt="" class="stretch plain"/>
+                    </section>
+                    <section>
+                        <h4>Ternary operation in Python and other</h4>
+                        <img src="data/Ternary_operation_Python.png" alt="" class="stretch plain"/>
+                    </section>
+                    <section>
+                        <h4>Ternary operation</h4>
+                        <img src="data/Ternary_operation_ternary_operator_in_c.png" alt="" class="stretch plain"/>
+                    </section>
+                    <section>
+                        <h4>Ternary operation</h4>
+                        <img src="data/Ternary_operation_ternary_operator_in_c_2.webp" alt="" class="stretch plain"/>
+                    </section>
+
+                    <section>
+                        <h4>Ternary operation</h4>
+                        <br>looks lambda...
+                        <br>x -> M
+                        <br>f(x) -> M
+                        <br>but: (M is an expression that uses x)
+                        <a href="https://en.wikipedia.org/wiki/Lambda_calculus">https://en.wikipedia.org/wiki/Lambda_calculus</a>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h4>Elvis operator</h4>
+
+                        <img src="data/Elvis_operator.png" alt="" class="stretch plain"/>
+
+                        <a href=" https://en.wikipedia.org/wiki/Elvis_operator">https://en.wikipedia.org/wiki/Elvis_operator</a>
+                    </section>
+                    <section>
+                        <h4>Elvis operator</h4>
+
+                        Elvis operator - aka (also known as) null coalescing operator
+
+                        <a href="https://en.wikipedia.org/wiki/Null_coalescing_operator">https://en.wikipedia.org/wiki/Null_coalescing_operator</a>
+                    </section>
+                    <section>
+
+                        <h4>In python can be made by Ternary operation</h4>
+                        <pre class="python"><code>
+now() if time is None else time
+                        </code></pre>
+
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h4>Branches usage???</h4>
+                        <img src="data/Face_WhyNot.jpg" alt="" class="stretch plain"/>
+
+                        <h3>Branches:</h3>
+                        <ul>
+                            <li>if, else, then</li>
+                            <li>case, match</li>
+                            <li>ternary operation</li>
+                            <li>Elvis operator</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h4>AI</h4>
+                        <img src="data/Code_AI_Fun_1.jpg" alt="" class="stretch plain"/>
+                    </section>
+                    <section>
+                        <h4>AI</h4>
+                        <img src="data/Code_AI_Fun_2.jpg" alt="" class="stretch plain"/>
+                    </section>
+
+                    <section>
+                        <h4>Simple expert system on rules</h4>
+                        <img src="data/Joke_AI_Expert_Eng (4).jpg" alt="" class="stretch plain"/>
+                    </section>
+
+                    <section>
+                        <h4>Tic Tac Toe Game</h4>
+                        <img src="data/AI_Tic_Tac_Toe_Logic.webp" alt="" class="stretch plain"/>
+                    </section>
+
+                    <section>
+                        Other usage:
+                        <br>
+                        AI usage, filtering
+                        <br>
+                        TODO
+                    </section>
+                </section>
+
+                <section>
+                    <h3>Links: </h3>
+                    <ul>        
+                        <li><a href="https://ravesli.com/if-else-python/">https://ravesli.com/if-else-python/</a></li>
+                        <li><a href="https://www.w3schools.com/python/python_conditions.asp">https://www.w3schools.com/python/python_conditions.asp</a></li>
+
+                        <li><a href="https://www.geeksforgeeks.org/python-match-case-statement/">https://www.geeksforgeeks.org/python-match-case-statement/</a>></li>
+                        <li><a href="https://mathspp.com/blog/pydonts/structural-pattern-matching-tutorial">https://mathspp.com/blog/pydonts/structural-pattern-matching-tutorial</a></li>
+
+                        <li><a href="https://www.geeksforgeeks.org/ternary-operator-in-python/">https://www.geeksforgeeks.org/ternary-operator-in-python/</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Lambda_calculus">https://en.wikipedia.org/wiki/Lambda_calculus</a></li>
+
+                        <li><a href="https://en.wikipedia.org/wiki/Elvis_operator">https://en.wikipedia.org/wiki/Elvis_operator</a></li>
+
+                    </ul>
+                </section>
+                <section>
+                    Thanks for your attention :)<br>
+                    <img src="../data/THANK_amazon_corgi_surprise_dribbble.gif" alt="" class="stretch plain"/>
+                </section>
+
+            </div>
+        </div>
+
+        <script src="../js/libs/reveal.js/js/reveal.js"></script>
+        <script>
+            Reveal.initialize({
+                // Display controls in the bottom right corner
+                controls: true,
+                // Display a presentation progress bar
+                progress: true,
+                // Set default timing of 2 minutes per slide
+                defaultTiming: 120,
+                // Display the page number of the current slide
+                slideNumber: true,
+                // Push each slide change to the browser history
+                history: false,
+                // Enable keyboard shortcuts for navigation
+                keyboard: true,
+                // Enable the slide overview mode
+                overview: true,
+                // Vertical centering of slides
+                center: true,
+                // Enables touch navigation on devices with touch input
+                touch: true,
+                // Loop the presentation
+                loop: false,
+                // Change the presentation direction to be RTL
+                rtl: false,
+                // Randomizes the order of slides each time the presentation loads
+                shuffle: false,
+                // Turns fragments on and off globally
+                fragments: true,
+                // Flags if the presentation is running in an embedded mode,
+                // i.e. contained within a limited portion of the screen
+                embedded: false,
+                // Flags if we should show a help overlay when the questionmark
+                // key is pressed
+                help: true,
+                // Flags if speaker notes should be visible to all viewers
+                showNotes: false,
+                // Global override for autolaying embedded media (video/audio/iframe)
+                // - null: Media will only autoplay if data-autoplay is present
+                // - true: All media will autoplay, regardless of individual setting
+                // - false: No media will autoplay, regardless of individual setting
+                autoPlayMedia: null,
+                // Number of milliseconds between automatically proceeding to the
+                // next slide, disabled when set to 0, this value can be overwritten
+                // by using a data-autoslide attribute on your slides
+                autoSlide: 0,
+                // Stop auto-sliding after user input
+                autoSlideStoppable: true,
+                // Use this method for navigation when auto-sliding
+                autoSlideMethod: Reveal.navigateNext,
+                // Enable slide navigation via mouse wheel
+                mouseWheel: false,
+                // Hides the address bar on mobile devices
+                hideAddressBar: true,
+                // Opens links in an iframe preview overlay
+                previewLinks: false,
+                // Transition style
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                // Transition speed
+                transitionSpeed: 'default', // default/fast/slow
+
+                // Transition style for full page slide backgrounds
+                backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+
+                // Number of slides away from the current that are visible
+                viewDistance: 3,
+                // Parallax background image
+                //parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+                // Parallax background size
+                //parallaxBackgroundSize: '1600px 1200px', // CSS syntax, e.g. "2100px 900px"
+
+                // Number of pixels to move the parallax background per slide
+                // - Calculated automatically unless specified
+                // - Set to 0 to disable movement along an axis
+                parallaxBackgroundHorizontal: null,
+                parallaxBackgroundVertical: null,
+                // The display mode that will be used to show slides
+                display: 'block',
+
+                dependencies: [
+                    {src: '../js/libs/highlight.js/highlight.min.js', async: true, callback: function () {
+                            hljs.initHighlightingOnLoad();
+                        }}
+                ]
+            });
+        </script>
+        <!--<script src="theme/keysActions.js" type="text/javascript"></script>-->
+        <script>
+            document.body.onload = function () {
+                //iframeWP.iframeWPInit("MainPresentation");
+
+                timer1 = new SimpleTimer();
+                timer1.init("Timer1");
+                slideNumberFieldDisplay();
+            };
+            Reveal.addEventListener('BirdAI', function () {
+                iframeWP.iframeWPSetHref('../../BirdAI/test_1.html');
+            }, false);
+            // Update slide number to reflect actual horizontal/vertical slide numbers (indexh/indexv are zero-based)
+            Reveal.addEventListener('slidechanged', function (event) {
+                slideNumberFieldDisplay();
+            });
+            function slideNumberFieldDisplay() {
+                var slideNumberField = document.querySelector('.reveal .slide-number'),
+                        slideNumber = (Reveal.getIndices().h + 1) + "." + (Reveal.getIndices().v + 1) + '/' + Reveal.getTotalSlides(),
+                        interval;
+                // Unable to set innerHTML straightaway without use of setInterval() as element may be re-created after event
+                interval = window.setInterval(
+                        function () {
+                            slideNumberField.innerHTML = slideNumber;
+                            clearInterval(interval);
+                        }, 10);
+            }
+
+        </script>
+
+
+
+    </body>
+</html>
